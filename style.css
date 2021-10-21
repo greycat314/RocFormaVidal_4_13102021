@@ -18,14 +18,14 @@ a:hover {
     cursor: pointer;
 }
 
-#page-loading-blocs-notifaction {
+/* #page-loading-blocs-notifaction {
     position: fixed;
     top: 0;
     bottom: 0;
     width: 100%;
     z-index: 100000;
     background: #FFFFFF url("img/pageload-spinner.gif") no-repeat center center;
-}
+} */
 
 .bloc {
     width: 100%;
@@ -91,8 +91,17 @@ a:hover {
 }
 
 .texture-paper::before {
-    background: url("img/texture-paper.png");
     background-size: 280px 280px;
+
+    background-image: url("img/texture-paper.png");
+    background-image: -webkit-image-set(
+        url("img/texture-paper.webp") type("image/webp"),        
+        url("img/texture-paper.png") type("image/png")
+    );
+    background-image: image-set(
+        url("img/texture-paper.webp") type("image/webp"),        
+        url("img/texture-paper.png") type("image/png")
+    );
 }
 
 .b-parallax {
@@ -810,19 +819,56 @@ h4 {
 }
 
 .bg-dots-bg {
-    background-image: url("img/dots-bg.png");
+    background-image: url("img/dots-bg-min.png");
+    background-image: -webkit-image-set(
+        url("img/dots-bg-min.webp") type("image/webp"),
+        url("img/dots-bg-min.png") type("image/png")
+    );
+    background-image: image-set(
+        url("img/dots-bg-min.webp") type("image/webp"),
+        url("img/dots-bg-min.png") type("image/png")
+    );
 }
 
 .bg-lines-h2-bg {
     background-image: url("img/lines-h2-bg.png");
+    background-image: -webkit-image-set(
+        url("img/lines-h2-bg.avif") type("image/webp"),        
+        url("img/lines-h2-bg.png") type("image/png")
+    );
+    
+    background-image: image-set(
+        url("img/lines-h2-bg.webp") type("image/webp"),        
+        url("img/lines-h2-bg.png") type("image/png")
+    );
 }
 
 .bg-banniere {
     background-image: url("img/la-chouette-agence-banniere.jpg");
+    background-image: -webkit-image-set(
+        url("img/la-chouette-agence-banniere.avif") type("image/avif"),
+        url("img/la-chouette-agence-banniere.webp") type("image/webp"),
+        url("img/la-chouette-agence-banniere.jpg") type("image/jpg")
+    );
+    background-image: image-set(
+        url("img/la-chouette-agence-banniere.avif") type("image/avif"),
+        url("img/la-chouette-agence-banniere.webp") type("image/webp"),
+        url("img/la-chouette-agence-banniere.jpg") type("image/jpg")
+    );
 }
 
 .bg-presentation {
-    background-image: url("img/image-de-presentation.bmp");
+    background-image: url("img/image-de-presentation.jpg");
+    background-image: -webkit-image-set(
+        url("img/image-de-presentation.avif") type("image/avif"),
+        url("img/image-de-presentation.webp") type("image/webp"),
+        url("img/image-de-presentation-min.jpg") type("image/jpg")
+    );
+    background-image: image-set(
+        url("img/image-de-presentation.avif") type("image/avif"),
+        url("img/image-de-presentation.webp") type("image/webp"),
+        url("img/image-de-presentation.jpg") type("image/jpg")
+    );
 }
 
 @media (max-width: 1024px) {
