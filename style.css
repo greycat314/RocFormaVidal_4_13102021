@@ -1,8 +1,8 @@
 body {
+    min-width: 308px;
     margin: 0;
     padding: 0;
     background: #FFF;
-    overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -41,9 +41,6 @@ a:hover {
     clear: both;
     background: 50% 50% no-repeat;
     padding: 0 50px;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
     position: relative;
 }
@@ -75,9 +72,6 @@ a:hover {
 .bg-tr-edge,
 .bg-br-edge,
 .bg-repeat {
-    -webkit-background-size: auto!important;
-    -moz-background-size: auto!important;
-    -o-background-size: auto!important;
     background-size: auto!important;
 }
 
@@ -100,16 +94,12 @@ a:hover {
 
 .texture-paper::before {
     background-size: 280px 280px;
-
-    background-image: -webkit-image-set(
-        url("img/texture-paper.webp") type("image/webp"),        
-        url("img/texture-paper.png") type("image/png")
-        );
-    background-image: image-set(
-        url("img/texture-paper.webp") type("image/webp"),        
-        url("img/texture-paper.png") type("image/png")
-        );
     background-image: url("img/texture-paper.png");
+
+    /* background-image: image-set(
+        url("img/texture-paper.webp") type("image/webp"),        
+        url("img/texture-paper.png") type("image/png")
+        ); */
 }
         
     
@@ -387,7 +377,6 @@ a:hover {
         top: 50%;
         right: 20px;
         transform: translate(0, -50%);
-        -webkit-transform: translateY(-50%);
     }
     .nav > li .dropdown-menu a,
     .nav > li .dropdown-menu a:hover {
@@ -571,12 +560,10 @@ a[data-lightbox]:hover::before {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
 }
 
 a[data-lightbox]:hover img {
     opacity: 0.6;
-    -webkit-animation-fill-mode: none;
     animation-fill-mode: none;
 }
 
@@ -765,12 +752,17 @@ h4 {
 }
 
 .portfolio-thumb {
-    margin-bottom: 24px;
+    margin: 0 auto;
+}
+
+.margin-bottom48 {
+    margin-bottom: 48px;
 }
 
 .portfolio-row {
-    margin-bottom: 44px;
-    margin-top: 50px;
+    /* margin-bottom: 44px; */
+    /* margin-top: 50px; */
+    margin-top: 24px;
 }
 
 .avatar {
@@ -843,58 +835,41 @@ h4 {
 }
 
 .bg-dots-bg {
-    background-image: -webkit-image-set(
+    background-image: url("img/dots-bg-min.png");
+
+    /* background-image: image-set(
         url("img/dots-bg-min.webp") type("image/webp"),
         url("img/dots-bg-min.png") type("image/png")
-        );
-        background-image: image-set(
-            url("img/dots-bg-min.webp") type("image/webp"),
-            url("img/dots-bg-min.png") type("image/png")
-    );
-
-    background-image: url("img/dots-bg-min.png");
+    ); */
 }
 
 .bg-lines-h2-bg {
-    background-image: -webkit-image-set(
-        url("img/lines-h2-bg.avif") type("image/webp"),        
-        url("img/lines-h2-bg.png") type("image/png")
-        );
-        
-        background-image: image-set(
-            url("img/lines-h2-bg.webp") type("image/webp"),        
-            url("img/lines-h2-bg.png") type("image/png")
-            );
+    background-image: url("img/lines-h2-bg.png");
 
-        background-image: url("img/lines-h2-bg.png");
+    /* background-image: image-set(
+        url("img/lines-h2-bg.webp") type("image/webp"),        
+        url("img/lines-h2-bg.png") type("image/png")
+        ); */
         }
 
 .bg-banniere {
-    background-image: -webkit-image-set(
-        url("img/la-chouette-agence-banniere.avif") type("image/avif"),
-        url("img/la-chouette-agence-banniere.webp") type("image/webp"),
-        url("img/la-chouette-agence-banniere.jpg") type("image/jpg")
-    );
-    background-image: image-set(
-        url("img/la-chouette-agence-banniere.avif") type("image/avif"),
-        url("img/la-chouette-agence-banniere.webp") type("image/webp"),
-        url("img/la-chouette-agence-banniere.jpg") type("image/jpg")
-        );
     background-image: url("img/la-chouette-agence-banniere.jpg");
+
+    /* background-image: image-set(
+        url("img/la-chouette-agence-banniere.avif") type("image/avif"),
+        url("img/la-chouette-agence-banniere.webp") type("image/webp"),
+        url("img/la-chouette-agence-banniere.jpg") type("image/jpg")
+        ); */
     }
 
 .bg-presentation {
     background-image: url("img/image-de-presentation.jpg");
-    background-image: -webkit-image-set(
-        url("img/image-de-presentation.avif") type("image/avif"),
-        url("img/image-de-presentation.webp") type("image/webp"),
-        url("img/image-de-presentation-min.jpg") type("image/jpg")
-    );
-    background-image: image-set(
+
+    /* background-image: image-set(
         url("img/image-de-presentation.avif") type("image/avif"),
         url("img/image-de-presentation.webp") type("image/webp"),
         url("img/image-de-presentation.jpg") type("image/jpg")
-    );
+    ); */
 }
 
 @media (max-width: 1024px) {
@@ -920,13 +895,14 @@ h4 {
     }
 }
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
     .b-parallax {
         background-attachment: scroll;
     }
 }
 
-@media only screen and (min-device-width: 1024px) and (max-device-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+/* @media only screen and (min-width: 1024px) and (max-width: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) { */
+@media only screen and (min-width: 1024px) and (max-width: 1366px) and (min-device-pixel-ratio: 1.5) {
     .b-parallax {
         background-attachment: scroll;
     }
@@ -945,8 +921,7 @@ h4 {
         position: relative;
     }
     .bloc {
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
+
     }
     .bloc-group,
     .bloc-group .bloc {
@@ -956,12 +931,13 @@ h4 {
     .bloc-fill-screen .fill-bloc-top-edge,
     .bloc-fill-screen .fill-bloc-bottom-edge {
         padding: 0 20px;
-        padding-left: constant(safe-area-inset-left);
-        padding-right: constant(safe-area-inset-right);
     }
 }
 
 @media (max-width: 767px) {
+    .text-center {
+    text-align: center;
+}
     .page-container {
         overflow-x: hidden;
         position: relative;
@@ -992,8 +968,6 @@ h4 {
     .site-navigation {
         position: inherit;
         transform: none;
-        -webkit-transform: none;
-        -ms-transform: none;
     }
     .nav > li {
         margin-top: 0;
@@ -1030,7 +1004,6 @@ h4 {
     .navbar-collapse {
         padding: 0;
         overflow-x: hidden;
-        -webkit-box-shadow: none;
         box-shadow: none;
     }
     .navbar-brand img {
@@ -1081,6 +1054,10 @@ h4 {
     }
     .voffset-lg {
         margin-top: 30px;
+    }
+
+    .hoffset-lg {
+        padding: 0 20px;
     }
     
     form {
