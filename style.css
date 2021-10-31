@@ -846,33 +846,33 @@ h4 {
 .bg-dots-bg {
     background-image: url("img/dots-bg-min.png");
 
-    /* background-image: image-set(
+    background-image: image-set(
         url("img/dots-bg-min.webp") type("image/webp"),
         url("img/dots-bg-min.png") type("image/png")
-    ); */
+    );
 }
 
 .bg-lines-h2-bg {
     background-image: url("img/lines-h2-bg.png");
 
-    /* background-image: image-set(
+    background-image: image-set(
         url("img/lines-h2-bg.webp") type("image/webp"),        
         url("img/lines-h2-bg.png") type("image/png")
-        ); */
-        }
+    );
+}
 
 .bg-banniere {
-    background-image: url("img/la-chouette-agence-banniere.jpg");
+    background-image: url("img/la-chouette-agence-banniere.avif");
 
     /* background-image: image-set(
         url("img/la-chouette-agence-banniere.avif") type("image/avif"),
         url("img/la-chouette-agence-banniere.webp") type("image/webp"),
         url("img/la-chouette-agence-banniere.jpg") type("image/jpg")
-        ); */
-    }
+    ); */
+}
 
 .bg-presentation {
-    background-image: url("img/image-de-presentation.jpg");
+    background-image: url("img/image-de-presentation.avif");
 
     /* background-image: image-set(
         url("img/image-de-presentation.avif") type("image/avif"),
