@@ -22,6 +22,11 @@ button {
     color: #fff!important;
 }
 
+#bloc-8 li a:hover {
+    color: #000;
+    border-bottom: 2px solid #fff;
+}
+
 a:hover {
     text-decoration: none;
     cursor: pointer;
@@ -789,7 +794,7 @@ h4 {
 }
 
 .bgc-atomic-tangerine {
-    background-color: #9c3d0e;
+    background-color: #cb4f12;
 }
 
 .tc-white {

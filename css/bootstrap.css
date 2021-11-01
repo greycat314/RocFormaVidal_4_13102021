@@ -1409,6 +1409,7 @@ html {
     padding-right : 15px;
     padding-left : 15px;
     }
+    
     .col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
     float : left;
     }
@@ -2584,7 +2585,10 @@ html {
     vertical-align : middle;
     touch-action : manipulation;
     cursor : pointer;
-    user-select : none;
+    -webkit-user-select : none;
+       -moz-user-select : none;
+        -ms-user-select : none;
+            user-select : none;
     background-image : none;
     border : transparent solid 1px;
     border-radius : 4px;
@@ -4275,6 +4279,14 @@ html {
     .alert-danger .alert-link {
     color : #843534;
     }
+    @-webkit-keyframes progress-bar-stripes {
+    from {
+    background-position : 40px 0;
+    }
+    to {
+    background-position : 0 0;
+    }
+    }
     @keyframes progress-bar-stripes {
     from {
     background-position : 40px 0;
@@ -4308,7 +4320,8 @@ html {
     background-size : 40px 40px;
     }
     .progress-bar.active, .progress.active .progress-bar {
-    animation : progress-bar-stripes 2s linear infinite;
+    -webkit-animation : progress-bar-stripes 2s linear infinite;
+            animation : progress-bar-stripes 2s linear infinite;
     }
     .progress-bar-success {
     background-color : #5cb85c;
@@ -5205,7 +5218,8 @@ html {
     @media all {
     .carousel-inner > .item {
     transition : transform 0.6s ease-in-out;
-    backface-visibility : hidden;
+    -webkit-backface-visibility : hidden;
+            backface-visibility : hidden;
     perspective : 1000px;
     }
     .carousel-inner > .item.active.right, .carousel-inner > .item.next {
