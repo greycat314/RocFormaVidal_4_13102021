@@ -3,8 +3,8 @@ body {
     margin: 0;
     padding: 0;
     background: #FFF;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    /* -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale; */
 }
 
 a,
@@ -569,7 +569,7 @@ a[data-lightbox]:hover::before {
 
 a[data-lightbox]:hover img {
     opacity: 0.6;
-    -webkit-animation-fill-mode: none;
+    /* -webkit-animation-fill-mode: none; */
             animation-fill-mode: none;
 }
 
@@ -849,21 +849,21 @@ h4 {
 }
 
 .bg-dots-bg {
-    background-image: url("img/dots-bg-min.png");
+    background-image: url("img/dots-bg-min.webp");
 
-    background-image: image-set(
+    /* background-image: image-set(
         url("img/dots-bg-min.webp") type("image/webp"),
         url("img/dots-bg-min.png") type("image/png")
-    );
+    ); */
 }
 
 .bg-lines-h2-bg {
-    background-image: url("img/lines-h2-bg.png");
+    background-image: url("img/lines-h2-bg.webp");
 
-    background-image: image-set(
+    /* background-image: image-set(
         url("img/lines-h2-bg.webp") type("image/webp"),        
         url("img/lines-h2-bg.png") type("image/png")
-    );
+    ); */
 }
 
 .bg-banniere {
